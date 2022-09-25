@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class ContentPanelDesktop extends StatelessWidget {
   const ContentPanelDesktop({Key? key}) : super(key: key);
@@ -9,8 +7,26 @@ class ContentPanelDesktop extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
         child: Container(
-            color: Colors.blue,
+            color: Theme.of(context).colorScheme.primaryContainer,
             height: double.infinity,
-            child: const Text('Content Panel')));
+            child: Column(
+              children: [
+                deviceHeader(),
+                keySlots(),
+                owners(),
+                permissions(),
+                keyMappers()
+              ],
+            )));
   }
+
+  Text keyMappers() => const Text('Key Mappers');
+
+  Text permissions() => const Text('Permissions');
+
+  Text owners() => const Text('Owners');
+
+  Text keySlots() => const Text('Device Key Slots');
+
+  Text deviceHeader() => const Text('Device Header');
 }

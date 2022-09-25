@@ -9,13 +9,15 @@ class AppTheme with ChangeNotifier {
   static final ThemeData darkTheme = ThemeData(
       colorScheme: const ColorScheme(
           brightness: Brightness.dark,
-          primary: Color.fromARGB(255, 36, 0, 241),
+          primary: Color(0xFF2400F1),
+          primaryContainer: Color(0xFF00051D),
           onPrimary: Colors.white,
-          secondary: Color.fromARGB(255, 36, 0, 241),
+          secondary: Color(0xFF2400F1),
           onSecondary: Colors.white,
-          error: Color.fromARGB(255, 177, 2, 19),
+          error: Color(0xFF67282F),
           onError: Colors.white,
           background: Colors.black,
+
           onBackground: Colors.white,
           surface: Colors.grey,
           onSurface: Colors.white));

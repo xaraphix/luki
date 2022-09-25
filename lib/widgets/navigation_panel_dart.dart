@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:luki/constants/app_constants.dart';
+
+import 'devices.dart';
+import 'os.dart';
+import 'support.dart';
+import 'user.dart';
 
 class NavigationPanelDesktop extends StatelessWidget {
   const NavigationPanelDesktop({Key? key}) : super(key: key);
@@ -9,7 +15,15 @@ class NavigationPanelDesktop extends StatelessWidget {
         width: 300,
         height: double.infinity,
         child: Container(
-            color: Theme.of(context).colorScheme.error,
-            child: const Text('Navigation Panel')));
+            color: Theme.of(context).colorScheme.background,
+            child: Column(
+              children: const [
+                Text(AppConstants.appName),
+                User(),
+                OS(),
+                Devices(),
+                Support()
+              ],
+            )));
   }
 }
