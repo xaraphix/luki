@@ -9,6 +9,7 @@ class NavigationPanelDesktop extends StatelessWidget {
         width: 300,
         height: double.infinity,
         child: Container(
-            color: Colors.white, child: const Text('Navigation Panelll')));
+            color: Theme.of(context).primaryColor,
+            child: const Text('Navigation Panelll')));
   }
 }

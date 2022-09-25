@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:luki/app_screen.dart';
+import 'package:luki/styles/themes.dart';
 
 void main() {
   runApp(const Luki());
@@ -11,11 +12,10 @@ class Luki extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Luki',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      darkTheme: AppTheme.darkTheme,
+      themeMode: AppTheme.themeMode,
       home: const AppScreen(),
     );
   }
