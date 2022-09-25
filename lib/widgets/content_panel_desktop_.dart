@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:luki/features/deviceKeys/widgets/selected_device.dart';
 
 class ContentPanelDesktop extends StatelessWidget {
   const ContentPanelDesktop({Key? key}) : super(key: key);
@@ -9,24 +10,6 @@ class ContentPanelDesktop extends StatelessWidget {
         child: Container(
             color: Theme.of(context).colorScheme.primaryContainer,
             height: double.infinity,
-            child: Column(
-              children: [
-                deviceHeader(),
-                keySlots(),
-                owners(),
-                permissions(),
-                keyMappers()
-              ],
-            )));
+            child: const SelectedDevice()));
   }
-
-  Text keyMappers() => const Text('Key Mappers');
-
-  Text permissions() => const Text('Permissions');
-
-  Text owners() => const Text('Owners');
-
-  Text keySlots() => const Text('Device Key Slots');
-
-  Text deviceHeader() => const Text('Device Header');
 }
