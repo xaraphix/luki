@@ -7,7 +7,16 @@ class AppTheme with ChangeNotifier {
   static ThemeMode get themeMode => ThemeMode.dark;
 
   static final ThemeData darkTheme = ThemeData(
-      primaryColor: const Color.fromARGB(255, 99, 98, 170),
-      scaffoldBackgroundColor: const Color.fromARGB(255, 11, 11, 11),
-      cardColor: Colors.black);
+      colorScheme: const ColorScheme(
+          brightness: Brightness.dark,
+          primary: Color.fromARGB(255, 36, 0, 241),
+          onPrimary: Colors.white,
+          secondary: Color.fromARGB(255, 36, 0, 241),
+          onSecondary: Colors.white,
+          error: Color.fromARGB(255, 177, 2, 19),
+          onError: Colors.white,
+          background: Colors.black,
+          onBackground: Colors.white,
+          surface: Colors.grey,
+          onSurface: Colors.white));
 }
